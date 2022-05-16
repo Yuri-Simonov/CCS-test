@@ -258,6 +258,15 @@ input {
     margin: 20px;
   }
 }
+@media (min-width: 769px) {
+  .header__list {
+    opacity: 0;
+    transition: 1.2s ease-in-out 0s;
+  }
+  .header__list.active {
+    opacity: 1;
+  }
+}
 @media (max-width: 768px), (max-height: 440px) {
   .header__list {
     flex-direction: column;
@@ -411,6 +420,13 @@ html::-webkit-scrollbar-thumb {
   line-height: 1.2;
   text-transform: uppercase;
   margin-bottom: 32px;
+  transform: translateX(-1000%);
+  opacity: 0;
+  transition: 0.9s ease-in-out 0s;
+}
+.preview__title.active {
+  opacity: 1;
+  transform: translate(0%);
 }
 .preview__title-color {
   color: #3e9cdc;
@@ -451,6 +467,39 @@ html::-webkit-scrollbar-thumb {
 }
 .preview__list > li:first-child {
   margin-bottom: 10px;
+}
+.preview__list > li {
+  transform: translateX(-1000%);
+}
+.preview__list.active > li {
+  transform: translateX(0%);
+}
+.preview__list.active li:nth-child(1) {
+  transition: 1.2s ease-in-out 0s;
+}
+.preview__list.active li:nth-child(2) {
+  transition: 1.2s ease-in-out 0.4s;
+}
+.preview__list.active li:nth-child(3) {
+  transition: 1.2s ease-in-out 0.6s;
+}
+.preview__list.active li:nth-child(4) {
+  transition: 1.2s ease-in-out 0.8s;
+}
+.preview__list.active li:nth-child(5) {
+  transition: 1.2s ease-in-out 1s;
+}
+.preview__list.active li:nth-child(6) {
+  transition: 1.2s ease-in-out 1.2s;
+}
+.preview__list.active li:nth-child(7) {
+  transition: 1.2s ease-in-out 1.4s;
+}
+.preview__list.active li:nth-child(8) {
+  transition: 1.2s ease-in-out 1.6s;
+}
+.preview__list.active li:nth-child(9) {
+  transition: 1.2s ease-in-out 1.8s;
 }
 .preview__list-item {
   font-weight: 400;
@@ -512,11 +561,25 @@ html::-webkit-scrollbar-thumb {
   background: #3e9cdc;
   border: 1px solid #ffffff;
   color: #ffffff;
+  transform: translateX(-1000%);
+  opacity: 0;
+  transition: 1.5s ease-in-out 0s;
+}
+.preview__links-order.active {
+  opacity: 1;
+  transform: translate(0%);
 }
 .preview__links-more {
   background: #ffffff;
   border: 1px solid #6f6d7b;
   color: #2a2b30;
+  transform: translateX(-1000%);
+  opacity: 0;
+  transition: 1.3s ease-in-out 0s;
+}
+.preview__links-more.active {
+  opacity: 1;
+  transform: translate(0%);
 }
 
 .order {
@@ -556,6 +619,11 @@ html::-webkit-scrollbar-thumb {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
+  opacity: 0;
+  transition: 0.8s ease-in-out 0s;
+}
+.order__title.active {
+  opacity: 1;
 }
 .order__title-color {
   color: #3e9cdc;
@@ -571,6 +639,11 @@ html::-webkit-scrollbar-thumb {
   text-align: center;
   margin-bottom: 80px;
   color: #bbbbbb;
+  opacity: 0;
+  transition: 1s ease-in-out 0s;
+}
+.order__subtitle.active {
+  opacity: 1;
 }
 @media (max-width: 576px), (max-height: 440px) {
   .order__subtitle {
@@ -583,6 +656,11 @@ html::-webkit-scrollbar-thumb {
   justify-content: center;
   padding: 0 44px;
   margin-bottom: 84px;
+  opacity: 0;
+  transition: 1s ease-in-out 0s;
+}
+.order__stages.active {
+  opacity: 1;
 }
 @media (max-width: 992px), (max-height: 440px) {
   .order__stages {
@@ -639,12 +717,12 @@ html::-webkit-scrollbar-thumb {
   }
 }
 .stages__text {
-  margin: 20px -44px 0;
+  margin: 20px -46px 0;
   text-align: center;
   font-size: 16px;
   line-height: 1.2;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .stages__text {
     margin: 20px -22px 0;
   }
@@ -703,6 +781,39 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
+.form > .form__row {
+  opacity: 0;
+}
+.form.active > .form__row {
+  opacity: 1;
+}
+.form.active .form__row:nth-child(1) {
+  transition: 1.2s ease-in-out 0s;
+}
+.form.active .form__row:nth-child(2) {
+  transition: 1.2s ease-in-out 0.4s;
+}
+.form.active .form__row:nth-child(3) {
+  transition: 1.2s ease-in-out 0.6s;
+}
+.form.active .form__row:nth-child(4) {
+  transition: 1.2s ease-in-out 0.8s;
+}
+.form.active .form__row:nth-child(5) {
+  transition: 1.2s ease-in-out 1s;
+}
+.form.active .form__row:nth-child(6) {
+  transition: 1.2s ease-in-out 1.2s;
+}
+.form.active .form__row:nth-child(7) {
+  transition: 1.2s ease-in-out 1.4s;
+}
+.form.active .form__row:nth-child(8) {
+  transition: 1.2s ease-in-out 1.6s;
+}
+.form.active .form__row:nth-child(9) {
+  transition: 1.2s ease-in-out 1.8s;
+}
 .form__row {
   margin: -15px;
   display: flex;
@@ -723,7 +834,7 @@ html::-webkit-scrollbar-thumb {
     margin-bottom: 15px;
   }
 }
-.form__submit {
+.form button[name=submit] {
   display: block;
   width: 370px;
   height: 48px;
@@ -738,7 +849,7 @@ html::-webkit-scrollbar-thumb {
   border-radius: 4px;
 }
 @media (max-width: 800px) {
-  .form__submit {
+  .form button[name=submit] {
     width: 92vw;
   }
 }
@@ -761,7 +872,7 @@ html::-webkit-scrollbar-thumb {
     width: 92vw;
   }
 }
-.form__file input {
+.form__file input[name=file] {
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -777,6 +888,7 @@ html::-webkit-scrollbar-thumb {
 
 .select {
   position: relative;
+  cursor: pointer;
 }
 .select__value {
   position: relative;
@@ -800,10 +912,9 @@ html::-webkit-scrollbar-thumb {
   overflow-y: auto;
   max-height: 0px;
   transition: 0.5s;
-  background: #dfdfe1;
-  color: #272733;
+  background: #272733;
+  color: #ffffff;
   border-radius: 4px;
-  margin-right: 10px;
   scrollbar-color: #3e9cdc #3d4050;
   /* «цвет ползунка» «цвет полосы скроллбара» */
   scrollbar-width: thin;
@@ -819,7 +930,6 @@ html::-webkit-scrollbar-thumb {
 }
 .select__wrapper {
   padding: 12px 35px 12px 10px;
-  border: 1px solid #ffffff;
   border-top: none;
   border-radius: 4px;
 }
@@ -830,14 +940,28 @@ html::-webkit-scrollbar-thumb {
   color: #42a9ed;
 }
 
+.select-active .select__value {
+  background: #272733;
+  border: 1px solid #3d4050;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: #ffffff;
+}
 .select-active .select__value svg {
   transition: 0.5s;
   transform: rotate(-180deg);
   transform-origin: center;
 }
+.select-active .select__value svg path {
+  transition: 0.3s;
+  fill: #ffffff;
+}
 .select-active .select__dropdown {
   transition: 1s;
   max-height: 1000px;
+  border: 1px solid #3d4050;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .range__info {
@@ -858,7 +982,7 @@ html::-webkit-scrollbar-thumb {
   margin: 5px;
   font-weight: 600;
 }
-.range input {
+.range input[name=range] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -871,11 +995,11 @@ html::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 @media (max-width: 800px) {
-  .range input {
+  .range input[name=range] {
     width: 92vw;
   }
 }
-.range input::-webkit-slider-thumb {
+.range input[name=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 24px;
@@ -884,7 +1008,7 @@ html::-webkit-scrollbar-thumb {
   border: 3px solid #286690;
   border-radius: 50%;
 }
-.range input::-moz-range-thumb {
+.range input[name=range]::-moz-range-thumb {
   -moz-appearance: none;
   appearance: none;
   width: 24px;
@@ -894,7 +1018,9 @@ html::-webkit-scrollbar-thumb {
   border-radius: 50%;
 }
 
-.field {
+.field,
+input[name=email],
+input[name=name] {
   width: 370px;
   height: 48px;
   background: #ffffffd9;
@@ -906,14 +1032,55 @@ html::-webkit-scrollbar-thumb {
   padding: 12px 35px 12px 10px;
 }
 @media (max-width: 800px) {
-  .field {
+  .field,
+input[name=email],
+input[name=name] {
     width: 92vw;
   }
 }
-.field::placeholder {
+.field::placeholder,
+input[name=email]::placeholder,
+input[name=name]::placeholder {
   color: #272733;
 }
 
+@media (min-width: 993px) {
+  .btn-hov:hover {
+    background: #ffffff;
+    border: 1px solid #6f6d7b;
+    color: #2a2b30;
+    transition: 0.3s;
+  }
+
+  .btn-hov-reverse:hover {
+    background: #3e9cdc;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    transition: 0.3s;
+  }
+
+  .link-hov:hover {
+    color: #43abf0;
+    transition: 0.3s;
+  }
+
+  .field-hov:hover,
+.field-hov:focus {
+    transition: 0.3s;
+    background: #3d4050d9;
+    border: 1px solid #3d4050;
+    color: #ffffff;
+  }
+  .field-hov:hover::placeholder,
+.field-hov:focus::placeholder {
+    color: #ffffff;
+  }
+  .field-hov:hover svg path,
+.field-hov:focus svg path {
+    transition: 0.3s;
+    fill: #ffffff;
+  }
+}
 .footer {
   background: #3d4050;
   padding: 30px 0;
