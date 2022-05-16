@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" type="text/html" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Тестовое задание от компании CCS" />
 		<title>CCS</title>
@@ -67,7 +67,7 @@
 							class="preview__bg"
 						/>
 						<div class="container-inner">
-							<article class="preview__body">
+							<div class="preview__body">
 								<h1 class="preview__title">
 									<span class="preview__title-color"
 										>Lorem ipsum</span
@@ -95,7 +95,7 @@
 									</li>
 								</ul>
 								<div class="preview__links">
-									<article class="preview__links-wrapper">
+									<div class="preview__links-wrapper">
 										<a
 											href="#"
 											title="страница заказа"
@@ -108,9 +108,9 @@
 											class="preview__links-more"
 											>подробнее</a
 										>
-									</article>
+									</div>
 								</div>
-							</article>
+							</div>
 						</div>
 					</section>
 					<section class="main-page__order order">
@@ -120,7 +120,7 @@
 							class="order__bg"
 						/>
 						<div class="container-inner">
-							<article class="order__body">
+							<div class="order__body">
 								<h2 class="order__title">
 									Оформление
 									<span class="order__title-color"
@@ -132,7 +132,7 @@
 									схемой работы!
 								</h3>
 								<div class="order__stages stages">
-									<article class="stages__item">
+									<div class="stages__item">
 										<div>
 											<svg
 												width="35"
@@ -149,15 +149,15 @@
 										<p class="stages__text">
 											Lorem ipsum dolor sit amet
 										</p>
-									</article>
-									<article class="stages__dots">
+									</div>
+									<div class="stages__dots">
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
-									</article>
-									<article class="stages__item">
+									</div>
+									<div class="stages__item">
 										<div>
 											<svg
 												width="31"
@@ -174,15 +174,15 @@
 										<p class="stages__text">
 											Сonsecteturadipiscing elit
 										</p>
-									</article>
-									<article class="stages__dots">
+									</div>
+									<div class="stages__dots">
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
-									</article>
-									<article class="stages__item">
+									</div>
+									<div class="stages__item">
 										<div>
 											<svg
 												width="40"
@@ -205,15 +205,15 @@
 										<p class="stages__text">
 											Sed do eiusmod tempor
 										</p>
-									</article>
-									<article class="stages__dots">
+									</div>
+									<div class="stages__dots">
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
-									</article>
-									<article class="stages__item">
+									</div>
+									<div class="stages__item">
 										<div>
 											<svg
 												width="37"
@@ -230,15 +230,15 @@
 										<p class="stages__text">
 											Esse cillum dolore eu fugiat
 										</p>
-									</article>
-									<article class="stages__dots">
+									</div>
+									<div class="stages__dots">
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
 										<span class="stages__point"></span>
-									</article>
-									<article class="stages__item">
+									</div>
+									<div class="stages__item">
 										<div>
 											<svg
 												width="39"
@@ -256,14 +256,12 @@
 											Excepteur sint occaecat cupidatat
 											non proident
 										</p>
-									</article>
+									</div>
 								</div>
 								<form action="#" class="order__form form">
 									<div class="form__row">
 										<div class="form__select select">
-											<article
-												class="select__value field"
-											>
+											<div class="select__value field">
 												<span
 													>Выберите тип системы</span
 												>
@@ -278,8 +276,8 @@
 														fill="#000"
 													/>
 												</svg>
-											</article>
-											<article class="select__dropdown">
+											</div>
+											<div class="select__dropdown">
 												<div class="select__wrapper">
 													<p
 														class="select__item select__item-active"
@@ -332,7 +330,7 @@
 														Et harum quidem
 													</p>
 												</div>
-											</article>
+											</div>
 										</div>
 										<input
 											type="email"
@@ -349,28 +347,26 @@
 									</div>
 									<div class="form__row">
 										<div class="form__range range">
-											<label for="range">
-												<div class="range__info">
-													<p class="range__text">
-														Sed ut perspiciatis,
-														unde omnis iste natus
-													</p>
-													<p class="range__percent">
-														<span>75</span> %
-													</p>
-												</div>
-												<input
-													type="range"
-													id="range"
-													name="range"
-													min="0"
-													max="100"
-													value="75"
-												/>
-											</label>
+											<div class="range__info">
+												<p class="range__text">
+													Sed ut perspiciatis, unde
+													omnis iste natus
+												</p>
+												<p class="range__percent">
+													<span>75</span> %
+												</p>
+											</div>
+											<input
+												type="range"
+												id="range"
+												name="range"
+												min="0"
+												max="100"
+												value="75"
+											/>
 										</div>
 										<div class="form__file">
-											<label for="file">
+											<label>
 												<input
 													type="file"
 													name="file"
@@ -400,14 +396,14 @@
 										</button>
 									</div>
 								</form>
-							</article>
+							</div>
 						</div>
 					</section>
 				</div>
 			</main>
 			<footer class="footer">
 				<div class="container-inner">
-					<article class="footer__body">
+					<div class="footer__body">
 						<div class="footer__item">
 							<p class="footer__copyrights">
 								© 2018 «LoremIpsum.net» Все права защищены.
@@ -432,7 +428,7 @@
 											</g>
 										</g>
 										<defs>
-											<clipPath id="a">
+											<clipPath>
 												<path
 													fill="#fff"
 													transform="translate(.5)"
@@ -497,7 +493,7 @@
 											/>
 										</g>
 										<defs>
-											<clipPath id="a">
+											<clipPath>
 												<path
 													fill="#fff"
 													transform="translate(.5)"
@@ -545,7 +541,7 @@
 								<p class="social__name">Мы вконтакте</p>
 							</a>
 						</div>
-					</article>
+					</div>
 				</div>
 			</footer>
 		</div>
