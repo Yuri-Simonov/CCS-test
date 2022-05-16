@@ -1,0 +1,61 @@
+// Переменные ================================================
+
+// Ширина внешнего контейнера
+$outer_container: 1920px;
+
+// Ширина внутреннего контейнера
+$inner_container: 1200px;
+
+// Паддинги внутреннего контейнера
+$paddings_inner_container: 0 15px;
+
+// Основной шрифт
+$font_family_common: "Lato", sans-serif;
+
+// Основной размер шрифта
+$font_size_common: 14px;
+
+// Основная высота шрифта
+$font_line-height_common: 100%;
+
+// Основной цвет шрифта
+$font_color_common: $white;
+
+//============================================================
+
+// Общая обертка
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+// Внешний контейнер
+.container-outer {
+	margin: 0 auto;
+	overflow: hidden;
+	@media (min-width: ($outer_container + 1px)) {
+		width: $outer_container;
+	}
+	@media (max-width: $outer_container) {
+		width: 100%;
+	}
+	max-width: $outer_container;
+	margin: 0 auto;
+}
+// Внутренний контейнер
+.container-inner {
+	max-width: $inner_container;
+	margin: 0 auto;
+	padding: $paddings_inner_container;
+}
+
+body {
+	font-family: $font_family_common;
+	font-size: $font_size_common;
+	line-height: $font_line-height_common;
+	color: $font_color_common;
+	background-color: $black-4;
+}

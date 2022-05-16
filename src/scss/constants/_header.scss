@@ -1,0 +1,158 @@
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	padding: 38px 0;
+	background-color: $black-2;
+
+	@media (max-width: 440px), (max-height: 440px) {
+		padding: 20px 0;
+	}
+
+	&__body {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+		margin-right: 60px;
+		@media (max-width: 768px), (max-height: 440px) {
+			margin: 5px 0 0;
+		}
+		svg {
+			@media (max-width: 768px), (max-height: 440px) {
+				transform: scale(0.7);
+				transform-origin: center left;
+			}
+		}
+	}
+	&__burger {
+		display: none;
+		@media (max-width: 768px), (max-height: 440px) {
+			display: block;
+			position: fixed;
+			width: 60px;
+			height: 40px;
+			top: 33px;
+			right: 15px;
+			z-index: 5;
+
+			&::before,
+			&::after {
+				content: "";
+				background-color: $white;
+				position: absolute;
+				width: 100%;
+				height: 4px;
+				right: 0;
+				transition: all 0.5s ease-in-out;
+				padding-right: 10px;
+			}
+			&::before {
+				top: 0;
+			}
+			&::after {
+				bottom: 0;
+			}
+			span {
+				position: absolute;
+				background-color: $white;
+				left: 0;
+				width: 100%;
+				height: 4px;
+				top: 19px;
+				transition: all 0.5s ease-in-out 0.3s;
+				padding-right: 10px;
+			}
+		}
+		@media (max-width: 440px), (max-height: 440px) {
+			transform: scale(0.7);
+			top: 14px;
+			transform-origin: center;
+		}
+	}
+	&__burger.active {
+		span {
+			transform: scale(0);
+			transition: all 0.5s ease-in-out;
+		}
+		&::before {
+			transform: rotate(45deg);
+			top: 18px;
+		}
+		&::after {
+			transform: rotate(-45deg);
+			bottom: 18px;
+		}
+	}
+	&__menu {
+		@media (max-width: 768px), (max-height: 440px) {
+			position: fixed;
+			top: -100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $black-4;
+			padding: 100px 0px 40px;
+			transition: all 0.5s ease-in-out;
+			overflow: auto;
+		}
+	}
+	&__menu.active {
+		top: 0;
+	}
+
+	&__list {
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+		z-index: 6;
+		margin: -10px -30px;
+
+		li {
+			margin: 10px 30px;
+			@media (max-width: 768px), (max-height: 440px) {
+				margin: 20px;
+			}
+		}
+		@media (min-width: 769px) {
+			//animation----------------------------------------
+			opacity: 0;
+			transition: 1.2s ease-in-out 0s;
+			&.active {
+				opacity: 1;
+			}
+			//-------------------------------------------------
+		}
+		@media (max-width: 768px), (max-height: 440px) {
+			flex-direction: column;
+			align-items: flex-start;
+			text-align: justify;
+			margin: 0;
+		}
+	}
+
+	&__link {
+		color: $white;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 16px;
+		text-transform: uppercase;
+		&-active {
+			color: $blue;
+		}
+		@media (max-width: 768px), (max-height: 440px) {
+			font-size: 20px;
+		}
+	}
+}
+
+// Отключение скролла страницы при открытом бургере
+.lock {
+	@media (max-width: 768px) {
+		overflow: hidden;
+	}
+}

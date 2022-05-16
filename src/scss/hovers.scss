@@ -1,0 +1,32 @@
+.btn-hov:hover {
+	background: $white !important;
+	border: 1px solid $gray-4 !important;
+	color: $black-3 !important;
+	transition: 0.3s;
+}
+.btn-hov-reverse:hover {
+	background: $blue-2;
+	border: 1px solid $white;
+	color: $white;
+	transition: 0.3s;
+}
+.link-hov:hover {
+	color: $blue;
+	transition: 0.3s;
+}
+.field-hov:hover,
+.field-hov:focus {
+	transition: 0.3s;
+	background: $black-6;
+	border: 1px solid $black-5;
+	color: $white;
+	&::placeholder {
+		color: $white;
+	}
+	svg {
+		path {
+			transition: 0.3s;
+			fill: $white;
+		}
+	}
+}

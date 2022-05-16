@@ -1,0 +1,26 @@
+// Шрифты
+@import "fonts.scss";
+
+// Обнуляющие стили
+@import "constants/_nullstyle.scss";
+
+// Переменные
+@import "constants/_vars.scss";
+
+// Миксины
+@import "constants/_mixins.scss";
+
+// Хедер
+@import "constants/_header.scss";
+
+// Контейнеры
+@import "constants/_containers.scss";
+
+// Основная страница
+@import "main-page.scss";
+
+// Ховеры
+@import "hovers.scss";
+
+// Футер
+@import "constants/_footer.scss";
