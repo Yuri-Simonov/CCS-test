@@ -788,6 +788,7 @@ html::-webkit-scrollbar-thumb {
 
 .select {
   position: relative;
+  cursor: pointer;
 }
 
 .select__value {
@@ -822,6 +823,7 @@ html::-webkit-scrollbar-thumb {
   overflow-y: auto;
   max-height: 0px;
   background: #272733;
+  cursor: pointer;
   color: #ffffff;
   border-radius: 4px;
   scrollbar-color: #3e9cdc #3d4050;
