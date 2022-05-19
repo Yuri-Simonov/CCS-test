@@ -258,6 +258,12 @@ body {
   background-color: #272733;
 }
 
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 html {
   scrollbar-color: #3e9cdc #3d4050;
   /* «цвет ползунка» «цвет полосы скроллбара» */
